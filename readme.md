@@ -18,3 +18,6 @@ Clone this repo into your local machine
 git clone https://github.com/Hadibeydoun8/turret-pwm-driver.git
 ```
 
+use platform io to get board configs projects tasks to build and upload
+
+![Screenshot 2025-03-31 at 12.35.25 PM.png](readme_img/Screenshot%202025-03-31%20at%2012.35.25%E2%80%AFPM.png)
