@@ -99,12 +99,12 @@ void BioloidController::writePose(){
         ax12write(id_[i]);
         ax12write(temp&0xff);
         ax12write(temp>>8);
-    } 
+    }
     ax12write(0xff - (checksum % 256));
     setRX(0);
 }
 
-/* set up for an interpolation from pose to nextpose over TIME 
+/* set up for an interpolation from pose to nextpose over TIME
     milliseconds by setting servo speeds. */
 void BioloidController::interpolateSetup(int time){
     int i;
@@ -144,12 +144,12 @@ void BioloidController::interpolateStep(){
                     pose_[i] = nextpose_[i];
                     complete--;
                 }else
-                    pose_[i] -= speed_[i];                
-            }       
+                    pose_[i] -= speed_[i];
+            }
         }
     }
     if(complete <= 0) interpolating = 0;
-    writePose();      
+    writePose();
 }
 
 /* get a servo value in the current pose */
